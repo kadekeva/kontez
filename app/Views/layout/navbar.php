@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow rounded-bottom">
     <div class="container">
 
         <!-- LOGO BRAND -->
@@ -6,31 +6,47 @@
             <img src="/assets/img/brand-2.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
             Kontez
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
         <!-- NAV MENU -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="#">Profile</a>
-                <a class="nav-link" href="#">Pricing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navList">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navList">
+            <div class="col navbar-nav">
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Layanan</a>
+                <a class="nav-link" href="#">Kontak</a>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary rounded" data-toggle="dropdown" data-display="static">
+                    Sign In
+                </button>
+                <div class="dropdown-menu dropdown-menu-left dropdown-menu-lg-right">
+                    <form class="px-4 py-3">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                <label class="form-check-label" for="dropdownCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">New around here? Sign up</a>
+                    <a class="dropdown-item" href="#">Forgot password?</a>
+                </div>
             </div>
         </div>
-
-        <!-- SIGN IN DROPDOWN -->
-        <div class="dropdown dropleft">
-            <button class="btn btn-secondary" type="button" id="login" data-toggle="dropdown">
-                Sign in
-            </button>
-            <div class="dropdown-menu" aria-labelledby="login">
-                <form class="form-inline justify-content-center">
-                    <input class="form-control m-1" placeholder="Username">
-                    <input class="form-control m-1" placeholder="Password">
-                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
-                </form>
-            </div>
-        </div>
-
     </div>
 </nav>
