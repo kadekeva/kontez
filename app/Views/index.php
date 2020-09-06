@@ -2,16 +2,10 @@
 
 <?= $this->section('content'); ?>
 
-<div class="container mt-3">
-    <div class="row">
-
-        <!-- TEKS TENTANG COMPANY -->
-        <div class="col-6">
-
-        </div>
-
+<div class="container mt-5">
+    <div class="row justify-content-end">
         <!-- FORMULIR PENDAFTARAN -->
-        <div class="col-6 bg-light pt-5 pb-5 rounded">
+        <div class="bg-light p-4 m-3 rounded">
             <form>
                 <div class="form-row">
 
