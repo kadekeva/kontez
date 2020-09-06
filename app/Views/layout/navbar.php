@@ -13,11 +13,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navList">
             <div class="col navbar-nav">
-                <a class="nav-link" href="#">About</a>
+                <!-- <a class="nav-link" href="#">About</a>
                 <a class="nav-link" href="#">Layanan</a>
-                <a class="nav-link" href="#">Kontak</a>
+                <a class="nav-link" href="#">Kontak</a> -->
             </div>
 
+            <!-- LOGIN DROPDOWN -->
             <div class="btn-group">
                 <button type="button" class="btn btn-secondary rounded" data-toggle="dropdown" data-display="static">
                     Sign In
@@ -40,7 +41,7 @@
                                 </label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </form>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">New around here? Sign up</a>
