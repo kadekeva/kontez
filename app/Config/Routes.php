@@ -34,6 +34,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Home::login');
 $routes->get('/regis', 'Home::regis');
+$routes->get('/daftar', 'Home::daftar');
+$routes->get('/checkout', 'Home::checkout');
 
 /**
  * --------------------------------------------------------------------

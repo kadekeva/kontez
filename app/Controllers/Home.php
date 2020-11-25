@@ -31,6 +31,24 @@ class Home extends BaseController
         return view('auth/regis', $data);
     }
 
+    public function daftar()
+    {
+        $data = [
+            'title' => 'Pembayaran'
+        ];
+
+        return view('user/daftar', $data);
+    }
+
+    public function checkout()
+    {
+        $data = [
+            'title' => 'Pembayaran'
+        ];
+
+        return view('user/checkout', $data);
+    }
+
     //--------------------------------------------------------------------
 
 }
