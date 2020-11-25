@@ -20,7 +20,9 @@
 
             <!-- LOGIN DROPDOWN -->
             <div class="btn-group">
-                <button type="button" class="btn btn-secondary rounded" data-toggle="dropdown" data-display="static">
+                <a href="/login" class="btn btn-light">Masuk</a>
+                <a href="" class="btn btn-primary">Daftar</a>
+                <!-- <button type="button" class="btn btn-secondary rounded" data-toggle="dropdown" data-display="static">
                     Sign In
                 </button>
                 <div class="dropdown-menu dropdown-menu-left dropdown-menu-lg-right">
@@ -46,7 +48,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">New around here? Sign up</a>
                     <a class="dropdown-item" href="#">Forgot password?</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
