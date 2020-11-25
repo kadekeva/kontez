@@ -1,4 +1,3 @@
-body {
-  background-image: url("https://www.prointer.rs/img/profilbg.jpg");
-  background-repeat: no-repeat;
+body .container .login{
+  background-image: url('../img/login.png');
 }
