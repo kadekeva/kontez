@@ -15,6 +15,17 @@ class Home extends BaseController
 
     public function login()
     {
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
+
+        $user = $this->db->query('SELECT * FROM user WHERE email = "' . $email . '"')->getRowArray();
+
+        if ($user) {
+            if ($user['password'] == $password) {
+                return redirect()->to('/');
+            }
+        }
+
         $data = [
             'title' => 'Login'
         ];
