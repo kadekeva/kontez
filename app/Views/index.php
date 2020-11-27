@@ -1,33 +1,29 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<img src="/assets/img/banner.png" alt="" class="img-fluid position-absolute">
 
-<div class="container pt-5 pb-5 mb-5 mt-5">
-    <div class="row text-center text-white p-5 mb-5 mt-5">
-        <div class="col pb-5 pt-5 mb-5">
-            <h1>Bangun Masa Depanmu Bersama Kontez</h1>
-            <h3>The Key of Success adalah Kunci Kesuksesan</h3>
-        </div>
-    </div>
-</div>
-
-<div class="container mt-5 pt-5">
-    <div class="row">
-        <div class="col-md-9">
-            <input type="text" class="form-control" placeholder="Cari judul lomba disini..." aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <div class="col-sm-1">
-            <button type="button" class="btn btn-primary">Search</button>
-        </div>
-        <div class="col-sm-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-light">Filter By</button>
-        </div>
+<div class="card border-0 text-white">
+    <img src="/assets/img/banner.png" class="card-img" alt="Banner Kontez">
+    <div class="card-img-overlay text-center mt-5">
+        <h3 class="card-title">Bangun Masa Depanmu Bersama Kontez</h3>
+        <p class="card-text">The Key of Success adalah Kunci Keberhasilan</p>
     </div>
 </div>
 
 <div class="container mt-5">
     <div class="row">
+        <div class="col-9">
+            <input type="text" class="form-control" placeholder="Cari judul lomba disini..." aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="col-2">
+            <a href="" class="btn btn-primary">Search</a>
+        </div>
+        <div class="col-md-1">
+            <a href="" class="btn btn-light">Filter</a>
+        </div>
+    </div>
+
+    <div class="row mt-5">
         <div class="col text-center">
             <a href="/galeri" class="btn btn-success">All<span class="sr-only">(current)</span></a>
             <a href="/jalanTol" class="btn btn-light">Jalan Tol</a>
@@ -35,10 +31,9 @@
             <a href="/underpass" class="btn btn-light">Underpass</a>
         </div>
     </div>
-</div>
 
-<div class="container mt-5">
     <hr>
+
     <div class="row d-flex justify-content-center">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
@@ -50,6 +45,7 @@
             </ul>
         </nav>
     </div>
+
     <div class="row">
         <div class="col">
             <div class="card-deck">
