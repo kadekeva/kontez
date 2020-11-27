@@ -22,9 +22,9 @@
             <h1>Transfer Bank</h1>
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-3 border p-3"><img src="/assets/img/bni.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/bni.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/bni.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/bni.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/bni.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/bni.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -34,9 +34,9 @@
             <h1>E-Money</h1>
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-3 border p-3"><img src="/assets/img/gopay.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/gopay.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/gopay.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/gopay.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/gopay.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/gopay.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -46,9 +46,9 @@
             <h1>Minimarket</h1>
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-3 border p-3"><img src="/assets/img/indomart.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/indomart.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/indomart.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/indomart.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/indomart.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/indomart.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -58,9 +58,9 @@
             <h1>Pulsa</h1>
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-3 border p-3"><img src="/assets/img/telkomsel.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/telkomsel.png" alt=""></div>
-                    <div class="col-3 border p-3"><img src="/assets/img/telkomsel.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/telkomsel.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/telkomsel.png" alt=""></div>
+                    <div class="col-3 border p-3"><img src="/assets/img/mitra/telkomsel.png" alt=""></div>
                 </div>
             </div>
         </div>
