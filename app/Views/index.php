@@ -46,43 +46,19 @@
         </nav>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <div class="card-deck">
-                <div class="card">
-                    <img src="/assets/img/poster.png" class="card-img-top" alt="...">
+    <div class="row row-cols-1 row-cols-md-4">
+        <?php foreach ($event as $e) : ?>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="/assets/img/poster/<?= $e['poster_lomba']; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/assets/img/poster.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/assets/img/poster.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/assets/img/poster.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 class="card-title"><?= $e['nama_lomba']; ?></h5>
+                        <p class="card-text"><?= $e['deskripsi_lomba']; ?></p>
+                        <p class="card-text"><small class="text-muted">Last updated at <?= $e['updated_at']; ?></small></p>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endforeach; ?>
     </div>
 </div>
 <?= $this->endSection(); ?>

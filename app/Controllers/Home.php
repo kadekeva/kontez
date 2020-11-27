@@ -6,8 +6,11 @@ class Home extends BaseController
 {
     public function index()
     {
+        $query = $this->db->query('SELECT lomba.nama_lomba, lomba.deskripsi_lomba, lomba.poster_lomba, lomba.updated_at, user.nama FROM lomba INNER JOIN user ON lomba.id_user = user.id')->getResultArray();
+
         $data = [
-            'title' => 'Home | Kontez'
+            'title' => 'Home | Kontez',
+            'event' => $query
         ];
 
         return view('index', $data);
