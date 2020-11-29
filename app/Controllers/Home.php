@@ -22,12 +22,19 @@ class Home extends BaseController
         $password = $this->request->getVar('password');
 
         $user = $this->db->query('SELECT * FROM user WHERE email = "' . $email . '"')->getRowArray();
+        $query = $this->db->query('SELECT lomba.nama_lomba, lomba.deskripsi_lomba, lomba.poster_lomba, lomba.updated_at, user.nama FROM lomba INNER JOIN user ON lomba.id_user = user.id')->getResultArray();
+
+        $event = [
+            'user' => $user,
+            'event' => $query
+        ];
 
         if ($user) {
             if ($user['password'] == $password) {
-                return redirect()->to('/');
+                return view('user/welcome-user', $event);
             }
         }
+
 
         $data = [
             'title' => 'Login'

@@ -23,9 +23,6 @@
 </head>
 
 <body>
-    <div class="login">
-
-    </div>
     <div class="container">
 
         <!-- Outer Row -->
