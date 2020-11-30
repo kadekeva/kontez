@@ -20,6 +20,9 @@ class Home extends BaseController
     {
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
+        $is_active = $this->request->getVar('is_active');
+
+        $this->db->query('UPDATE user SET is_active = "' . $is_active . '" WHERE email = "' . $email . '"');
 
         $user = $this->db->query('SELECT * FROM user WHERE email = "' . $email . '"')->getRowArray();
         $query = $this->db->query('SELECT lomba.nama_lomba, lomba.deskripsi_lomba, lomba.poster_lomba, lomba.updated_at, user.nama FROM lomba INNER JOIN user ON lomba.id_user = user.id')->getResultArray();
@@ -37,7 +40,7 @@ class Home extends BaseController
 
 
         $data = [
-            'title' => 'Login'
+            'title' => 'Login | Kontez'
         ];
 
         return view('auth/login', $data);

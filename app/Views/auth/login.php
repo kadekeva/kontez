@@ -51,6 +51,7 @@
                                             <div class="col"><a href="/" class="btn btn-light btn-block">Home</a></div>
                                             <div class="col"><button type="submit" class="btn btn-primary btn-block">Masuk</button></div>
                                         </div>
+                                        <input type="hidden" name="is_active" value="1">
                                     </form>
                                     <hr>
                                     <div class="text-center">
