@@ -18,38 +18,27 @@
                 <a class="nav-link" href="#">Kontak</a> -->
             </div>
 
-            <!-- LOGIN DROPDOWN -->
-            <div class="btn-group">
-                <a href="/login" class="btn btn-light">Masuk</a>
-                <a href="" class="btn btn-primary">Daftar</a>
-                <!-- <button type="button" class="btn btn-secondary rounded" data-toggle="dropdown" data-display="static">
-                    Sign In
-                </button>
-                <div class="dropdown-menu dropdown-menu-left dropdown-menu-lg-right">
-                    <form class="px-4 py-3">
-                        <div class="form-group">
-                            <label for="exampleDropdownFormEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+            <?=
+                ($user['is_active'] == 1) ?
+                    '<div class="dropdown">
+                        <button class="btn btn-secondary bg-transparent border-0 text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                            Halo, <b>' . $user['nama'] . '</b> !
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Edit Profile</a>
+                            <form action="/Home/logout" method="POST" class="user">
+                                <input type="hidden" name="email" id="email" value="' . $user['email'] . '">
+                                <input type="hidden" name="is_active" id="is_active" value="0">
+                                <button type="submit" class="dropdown-item text-danger">Logout</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleDropdownFormPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                                <label class="form-check-label" for="dropdownCheck">
-                                    Remember me
-                                </label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">New around here? Sign up</a>
-                    <a class="dropdown-item" href="#">Forgot password?</a>
-                </div> -->
-            </div>
+                    </div>' :
+                    '<div class="btn-group">
+                        <a href="/login" class="btn btn-light">Masuk</a>
+                        <a href="" class="btn btn-primary">Daftar</a>
+                    </div>';
+            ?>
         </div>
     </div>
 </nav>

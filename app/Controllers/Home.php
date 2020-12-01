@@ -34,7 +34,7 @@ class Home extends BaseController
 
         if ($user) {
             if ($user['password'] == $password) {
-                return view('user/welcome-user', $event);
+                return view('index', $event);
             }
         }
 
@@ -71,6 +71,16 @@ class Home extends BaseController
         ];
 
         return view('user/checkout', $data);
+    }
+
+    public function logout()
+    {
+        $email = $this->request->getVar('email');
+        $is_active = $this->request->getVar('is_active');
+
+        $this->db->query('UPDATE user SET is_active = "' . $is_active . '" WHERE email = "' . $email . '"');
+
+        return redirect()->to('/');
     }
 
     //--------------------------------------------------------------------
