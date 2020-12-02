@@ -19,13 +19,13 @@
             </div>
 
             <?=
-                ($user['is_active'] == 1) ?
+                ($user['email'] == true) ?
                     '<div class="dropdown">
                         <button class="btn btn-secondary bg-transparent border-0 text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown">
                             Halo, <b>' . $user['nama'] . '</b> !
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="/Home/profile/' . $user['id'] . '">Profile</a>
                             <a class="dropdown-item" href="#">Edit Profile</a>
                             <form action="/Home/logout" method="POST" class="user">
                                 <input type="hidden" name="email" id="email" value="' . $user['email'] . '">
