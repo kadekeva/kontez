@@ -85,6 +85,18 @@ class Home extends BaseController
         return view('user/profile', $data);
     }
 
+    public function edit($id)
+    {
+        $user = $this->db->query('SELECT * FROM user where id = ' . $id)->getRowArray();
+
+        $data = [
+            'title' => 'Profile | Kontez',
+            'user' => $user
+        ];
+
+        return view('user/profile', $data);
+    }
+
     public function logout()
     {
         $email = $this->request->getVar('email');

@@ -37,6 +37,7 @@ $routes->get('/regis', 'Home::regis');
 $routes->get('/daftar', 'Home::daftar');
 $routes->get('/checkout', 'Home::checkout');
 $routes->get('/Home/(:segment)', 'Home::profile/$1');
+$routes->get('/Home/edit', 'Home::edit');
 
 /**
  * --------------------------------------------------------------------
