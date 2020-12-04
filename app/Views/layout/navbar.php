@@ -19,19 +19,15 @@
             </div>
 
             <?=
-                ($user['email'] == true) ?
+                (session('email') == true) ?
                     '<div class="dropdown">
                         <button class="btn btn-secondary bg-transparent border-0 text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown">
                             Halo, <b>' . $user['nama'] . '</b> !
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="/Home/profile/' . $user['id'] . '">Profile</a>
-                            <a class="dropdown-item" href="#">Edit Profile</a>
-                            <form action="/Home/logout" method="POST" class="user">
-                                <input type="hidden" name="email" id="email" value="' . $user['email'] . '">
-                                <input type="hidden" name="is_active" id="is_active" value="0">
-                                <button type="submit" class="dropdown-item text-danger">Logout</button>
-                            </form>
+                            <a class="dropdown-item" href="/profile">Profile</a>
+                            <a class="dropdown-item" href="/edit">Edit Profile</a>
+                            <a class="dropdown-item text-danger" href="/logout">Logout</a>
                         </div>
                     </div>' :
                     '<div class="btn-group">

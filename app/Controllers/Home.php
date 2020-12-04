@@ -6,11 +6,16 @@ class Home extends BaseController
 {
     public function index()
     {
+        if (session('email')) {
+            $user = $this->db->query('SELECT * FROM user where email = "' . session('email') . '"')->getRowArray();
+        }
+
         $query = $this->db->query('SELECT lomba.nama_lomba, lomba.deskripsi_lomba, lomba.poster_lomba, lomba.updated_at, user.nama FROM lomba INNER JOIN user ON lomba.id_user = user.id')->getResultArray();
 
         $data = [
             'title' => 'Home | Kontez',
-            'event' => $query
+            'event' => $query,
+            'user' => $user
         ];
 
         return view('index', $data);
@@ -20,21 +25,18 @@ class Home extends BaseController
     {
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-        $is_active = $this->request->getVar('is_active');
-
-        $this->db->query('UPDATE user SET is_active = "' . $is_active . '" WHERE email = "' . $email . '"');
 
         $user = $this->db->query('SELECT * FROM user WHERE email = "' . $email . '"')->getRowArray();
-        $query = $this->db->query('SELECT lomba.nama_lomba, lomba.deskripsi_lomba, lomba.poster_lomba, lomba.updated_at, user.nama FROM lomba INNER JOIN user ON lomba.id_user = user.id')->getResultArray();
-
-        $event = [
-            'user' => $user,
-            'event' => $query
-        ];
 
         if ($user) {
             if ($user['password'] == $password) {
-                return view('index', $event);
+                $data = [
+                    'email' => $user['email']
+                ];
+
+                $this->session->set($data);
+
+                return redirect()->to('/');
             }
         }
 
@@ -73,9 +75,9 @@ class Home extends BaseController
         return view('user/checkout', $data);
     }
 
-    public function profile($id)
+    public function profile()
     {
-        $user = $this->db->query('SELECT * FROM user where id = ' . $id)->getRowArray();
+        $user = $this->db->query('SELECT * FROM user where email = "' . session('email') . '"')->getRowArray();
 
         $data = [
             'title' => 'Profile | Kontez',
@@ -85,24 +87,21 @@ class Home extends BaseController
         return view('user/profile', $data);
     }
 
-    public function edit($id)
+    public function edit()
     {
-        $user = $this->db->query('SELECT * FROM user where id = ' . $id)->getRowArray();
+        $user = $this->db->query('SELECT * FROM user where email = "' . session('email') . '"')->getRowArray();
 
         $data = [
             'title' => 'Profile | Kontez',
             'user' => $user
         ];
 
-        return view('user/profile', $data);
+        return view('user/edit-profile', $data);
     }
 
     public function logout()
     {
-        $email = $this->request->getVar('email');
-        $is_active = $this->request->getVar('is_active');
-
-        $this->db->query('UPDATE user SET is_active = "' . $is_active . '" WHERE email = "' . $email . '"');
+        $this->session->remove('email');
 
         return redirect()->to('/');
     }
