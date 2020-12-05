@@ -79,24 +79,39 @@ class Home extends BaseController
     {
         $user = $this->db->query('SELECT * FROM user where email = "' . session('email') . '"')->getRowArray();
 
-        $data = [
-            'title' => 'Profile | Kontez',
-            'user' => $user
-        ];
+        if ($user) {
+            $data = [
+                'title' => 'Profile | Kontez',
+                'user' => $user
+            ];
 
-        return view('user/profile', $data);
+            return view('user/profile', $data);
+        }
+
+        return redirect()->to('/');
     }
 
     public function edit()
     {
+        $nama = $this->request->getVar('nama');
+        $umur = $this->request->getVar('umur');
+        $pekerjaan = $this->request->getVar('pekerjaan');
+        $telepon = $this->request->getVar('telepon');
+
+        $this->db->query('UPDATE user SET nama = "' . $nama . '" WHERE email = "' . session('email') . '"');
+
         $user = $this->db->query('SELECT * FROM user where email = "' . session('email') . '"')->getRowArray();
 
-        $data = [
-            'title' => 'Profile | Kontez',
-            'user' => $user
-        ];
+        if ($user) {
+            $data = [
+                'title' => 'Profile | Kontez',
+                'user' => $user
+            ];
 
-        return view('user/edit-profile', $data);
+            return view('user/edit-profile', $data);
+        }
+
+        return redirect()->to('/');
     }
 
     public function logout()

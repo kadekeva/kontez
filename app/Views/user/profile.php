@@ -10,7 +10,7 @@
             <h5>Profile</h5>
         </div>
         <div class="col text-right">
-            <a href="/Home/profile/<?= $user['id']; ?>" class="btn btn-secondary">Edit Profile</a>
+            <a href="/edit" class="btn btn-secondary">Edit Profile</a>
         </div>
     </div>
     <div class="row mt-4">

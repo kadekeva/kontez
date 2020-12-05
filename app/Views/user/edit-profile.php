@@ -3,7 +3,14 @@
 <?= $this->section('content'); ?>
 
 <div class="container">
-
+    <div class="row mt-5">
+        <div class="col-3 text-left">
+            <button type="button" class="btn btn-light">Kembali</button>
+        </div>
+        <div class="col-6 text-center">
+            <h5>Edit Profile</h5>
+        </div>
+    </div>
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
@@ -18,7 +25,7 @@
                         </div>
                         <div class="col-lg-6">
                             <h3>Edit Profile</h3>
-                            <form>
+                            <form action="/Home/edit" method="POST">
                                 <div class="form-group">
                                     <label for="inputAddress">Nama</label>
                                     <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
